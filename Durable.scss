@@ -13,6 +13,8 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+
+
 @mixin links{
   color:rgb(17, 24, 39); 
   text-decoration: none;
@@ -29,7 +31,9 @@ body{
   display: flex;
   flex-direction: column;
   gap:16px;
+ 
 }
+
 .slide1{
   background-image: url('officespace.jfif');
   background-repeat: no-repeat;
@@ -49,6 +53,19 @@ body{
   p{
     color:gray;
   }
+}
+.slide6{
+  margin-top:25vh;
+  width:90%;
+  margin-left:5%;
+  p{
+    color:gray;
+  }
+}
+#aboutbtn{
+  padding: 6px;
+  
+  @include links();
 }
 .fit{
   width: 100%;
@@ -102,11 +119,21 @@ header{
         }
     }  
  }
+ .form{
+  
+  a{
+    @include links();
+    
+  }
+ }
  .layer3{
   height:40vh;
   width:100%;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: gray;
   padding-top: 5vh;
+ 
  }
  .font{
   display: flex; 
@@ -116,8 +143,7 @@ header{
  }
  
  .services{
-  display: flex;
-  flex-direction: column;
+  
   gap:20px;
   margin-bottom: 35px;
   
@@ -171,6 +197,7 @@ figcaption{
   
   font-size: 1.3em;
   margin-bottom: 10px;
+  padding-left: 5%;
 }
 .form{
   width:100%;
@@ -190,7 +217,8 @@ figcaption{
 }
 .swiper-container{
   width: 100%;
-  height: 30vh; 
+  height: 32vh; 
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,16 +228,17 @@ figcaption{
    
   }
  .swiper-slide{
-  width: 40%;
-  padding-left: 10%;
+  width: 25vw;
+  padding-left: 33vw;
  }
 }
 /* for laptops and large screen */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   body {
     font-size: 14px;
     
   }
+
   .gallery-container {
     display: flex;
     height:50vh;
@@ -217,7 +246,13 @@ figcaption{
     overflow-x: scroll;
     
   }
-  
+  .projects{
+    width:90%;
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+  }
   .gallery-list {
     display: flex;
     margin: 0;
@@ -265,9 +300,11 @@ figcaption{
 .fits{
   width:50%;
 }
-}
+
 .fit{
-  width:30%;
+  width:100%;
+  height: 270px;
+  padding: 5%;
 }
 header{
   img{
@@ -275,17 +312,43 @@ header{
     height: 30%;
     margin-top:4vh;
     margin-left:8vh;
-}          
+}  
+}        
 .contact{
   display: flex;
   flex-direction: row;
   gap: 10%;
   width:90%;
 } 
-
-
+.projects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 10%;
 }
-
+  .layer3{
+    height:40vh;
+    width:100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: gray;
+    padding-top: 5vh;
+    p{
+      width:50%;
+    }
+   }
+  .contact{
+    display: flex;
+    flex-direction: row;
+  } 
+  .txt{
+    width:50vw;
+  }
+  .form{
+    width:50vw;
+  }
+}
 
 
 /*Query for mobile phones */
@@ -294,6 +357,7 @@ header{
     font-size: 14px;
     width:100%;
   }
+
   .gallery-container{
     img{
       width: 100%;
@@ -394,6 +458,7 @@ header{
     p{
       font-size: 14.8px;
     }
+
     .form{
       width:90%;
       input{
@@ -409,6 +474,7 @@ header{
   body {
     width:100%;
   }
+  
   .slide1 {
     background-size: contain;
     background-position: center;
@@ -441,3 +507,5 @@ header{
     }
   }
 }
+  
+
